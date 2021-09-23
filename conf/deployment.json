@@ -1,0 +1,24 @@
+{
+  "default": {
+    "jobs": [
+      {
+        "name": "martech_pipelines-sample",
+        "existing_cluster_id": "0715-123037-mars7",
+        "libraries": [],
+        "email_notifications": {
+          "on_start": [],
+          "on_success": [],
+          "on_failure": ["gaurav.kumar@nykaa.com"]
+        },
+        "max_retries": 0,
+        "spark_python_task": {
+          "python_file": "martech_pipelines/tasks/user_profile/clevertap.py",
+          "parameters": [
+            "--conf-file",
+            "conf/user_profile/clevertap.json"
+          ]
+        }
+      }
+    ]
+  }
+}
